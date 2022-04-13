@@ -26,3 +26,4 @@ def permutaition(arr, n):
 
 
 print(permutaition(arr, 3))
+# 사실 잘 이해 안감ㅋㅋ 파이썬 나중에~ 
