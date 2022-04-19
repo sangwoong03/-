@@ -20,3 +20,5 @@
   - LinkedList (여러 개의 노드로 구성)
     - HEAD : 첫 지점. (첫번째 노드를 가리키는 pointer)
     - null : 끝 지점. (마지막 next 값에 null이 저장)
+- 새로운 elements를 삽입하고 삭제하는데 용이하며 restructing이 덜 복잡하다.
+- 반면 array보다 많은 메모리를 사용하고 특정 element 검색 시 비효율적이다.
