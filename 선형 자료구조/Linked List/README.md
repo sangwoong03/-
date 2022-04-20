@@ -22,3 +22,6 @@
     - null : 끝 지점. (마지막 next 값에 null이 저장)
 - 새로운 elements를 삽입하고 삭제하는데 용이하며 restructing이 덜 복잡하다.
 - 반면 array보다 많은 메모리를 사용하고 특정 element 검색 시 비효율적이다.
+
+- 예시 ...
+  `음악 플레이 리스트, 전철 노선도, ctrl+z or ctrl+y,` 등...
