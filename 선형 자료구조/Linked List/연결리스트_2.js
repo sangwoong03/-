@@ -60,9 +60,7 @@ let ll = new LinkedList();
 // console.log(ll);
 
 ll.append(1);
-ll.printNode();
 ll.append(10);
-ll.printNode();
 ll.append(100);
 ll.printNode();
 console.log(ll.size());
