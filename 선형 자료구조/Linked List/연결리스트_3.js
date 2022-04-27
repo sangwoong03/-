@@ -64,8 +64,6 @@ let ll = new LinkedList();
 ll.insert(1);
 ll.insert(10);
 ll.insert(100);
-
 ll.insert(2, 1);
 ll.insert(3, 3);
 ll.printNode();
-console.log(ll.size());
