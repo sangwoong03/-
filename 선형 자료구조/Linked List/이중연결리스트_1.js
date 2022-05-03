@@ -58,6 +58,126 @@ DoubleLinkedList.prototype.append = function (value) {
 	this.length++;
 };
 
+DoubleLinkedList.prototype.insert = function (value, position = 0) {
+	if (position < 0 || position > this.length) {
+		return false;
+	}
+
+	let node = new Node(value),
+		current = this.head,
+		index = 0,
+		prev;
+
+	if (position === 0) {
+		if (this.head === null) {
+			this.head = node;
+			this.tail = node;
+		} else {
+			node.next = current;
+			this.head = node;
+		}
+	} else if (position === this.length) {
+		current = this.tail;
+		current.next = node;
+		node.prev = node;
+		this.tail = node;
+	} else {
+		while (index++ < position) {
+			prev = current;
+			current = current.next;
+		}
+
+		node.next = current;
+		prev.next = node;
+
+		current.prev = node;
+		node.prev = prev;
+	}
+	this.length++;
+
+	return true;
+};
+
+DoubleLinkedList.prototype.remove = function (value) {
+	let current = this.head,
+		prev = current;
+
+	while (current.data != value && current.next != null) {
+		prev = current;
+		current = current.next;
+	}
+
+	if (current.data != value) {
+		return null;
+	}
+
+	if (current === this.head) {
+		this.head = current.next;
+		if (this.length === 1) this.tail = null;
+		else this.head.prev = null;
+	} else if (current === this.tail) {
+		this.tail = current.prev;
+		this.tail.next = null;
+	} else {
+		prev.next = current.next;
+		current.next.prev = prev;
+	}
+	this.length++;
+
+	return current.data;
+};
+
+DoubleLinkedList.prototype.removeAt = function (position = 0) {
+	if (position < 0 || position > this.length) {
+		return null;
+	}
+
+	let current = this.head,
+		index = 0,
+		prev;
+
+	if (position === 0) {
+		this.head = current.next;
+		if (this.length === 1) this.tail = null;
+		else this.head.prve = null;
+	} else if (position === this.length - 1) {
+		current = this.tail;
+		this.tail = current.prev;
+		this.tail.next = null;
+	} else {
+		while (index++ < position) {
+			prev = current;
+			current = current.next;
+		}
+
+		prev.next = current.next;
+		current.next.prev = prev;
+	}
+
+	this.length--;
+
+	return current.data;
+};
+
+DoubleLinkedList.prototype.indexOf = function (value) {
+	let current = this.head,
+		index = 0;
+
+	while (current != null) {
+		if (current.data === value) {
+			return index;
+		}
+		index++;
+		current = current.next;
+	}
+
+	return -1;
+};
+
+DoubleLinkedList.prototype.remove2 = function (value) {
+	let index = this.indexOf(value);
+	return this.removeAt(index);
+};
 // ============================= TEST CODE =============================
 
 let dll = new DoubleLinkedList();
@@ -84,5 +204,49 @@ dll.append(1);
 dll.append(10);
 dll.append(100);
 console.log("========이중연결리스트 값 추가 및 print노드 구조 DLL========");
+dll.printNode();
+dll.printNodeInverse();
+
+console.log("========이중연결리스트 값 삽입 및 print노드 구조 DLL========");
+dll.insert(2, 3);
+dll.insert(5, 2);
+dll.printNode();
+dll.printNodeInverse();
+
+console.log("========이중연결리스트 값 삭제 및 print노드 구조 DLL========");
+// console.log(dll.remove(2));
+// dll.printNode();
+// dll.printNodeInverse();
+// console.log(dll.remove(1));
+// dll.printNode();
+// dll.printNodeInverse();
+// console.log(dll.remove(100));
+// dll.printNode();
+// dll.printNodeInverse();
+
+console.log(
+	"========이중연결리스트 인덱스 값 삭제 및 print노드 구조 DLL========",
+);
+// console.log(dll.removeAt(2));
+// dll.printNode();
+// dll.printNodeInverse();
+// console.log(dll.removeAt(1));
+// dll.printNode();
+// dll.printNodeInverse();
+// console.log(dll.removeAt(100));
+// dll.printNode();
+// dll.printNodeInverse();
+
+console.log(
+	"========이중연결리스트 인덱스 + 값 삭제 및 print노드 구조 DLL========",
+);
+console.log(dll.indexOf(1000));
+console.log(dll.remove2(2));
+dll.printNode();
+dll.printNodeInverse();
+console.log(dll.remove2(1));
+dll.printNode();
+dll.printNodeInverse();
+console.log(dll.remove2(100));
 dll.printNode();
 dll.printNodeInverse();
