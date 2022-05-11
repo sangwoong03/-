@@ -71,6 +71,6 @@
   - NODE
     - data : 값을 갖고 있는 element
     - next : 또 다른 node를 가리킬 수 있는 pointer
-  - CiurcularLinkedList (여러 개의 노드로 구성)
-    - head : 첫 지점. (첫번째 노드를 가리키는 pointer)
-    - 마지막 부분: head ... 일방 연결리스트와 동일하지만, 끝부분이 다시 첫부분을 가리킨다.
+  - CiurcularLinkedList (여러 개의 노드로 구성) - head : 첫 지점. (첫번째 노드를 가리키는 pointer) - 마지막 부분: head ... 일방 연결리스트와 동일하지만, 끝부분이 다시 첫부분을 가리킨다.
+    <br>
+    <br>
