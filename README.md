@@ -44,6 +44,8 @@
 3. [연결리스트](https://github.com/sangwoong03/Data-sturcture-Algorithm/tree/master/%EC%84%A0%ED%98%95%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Linked%20List)
 4. 이중연결리스트
 5. 원형연결리스트
+6. [스택 (Stack)](https://github.com/sangwoong03/Data-sturcture-Algorithm/tree/master/%EC%84%A0%ED%98%95%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Stack)
+7. [큐 (Queue)](https://github.com/sangwoong03/Data-sturcture-Algorithm/tree/master/%EC%84%A0%ED%98%95%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/Queue)
 
 ### 2. 비선형 자료구조
 
