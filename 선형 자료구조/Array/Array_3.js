@@ -9,19 +9,6 @@ function answer(nums) {
 	for (let i = 0; i < 2; i++) {
 		result[i] = nums.sort((x, y) => y - x)[i];
 	}
-	// 다른 풀이
-	// result = nums[0] > nums[1] ? [nums[0], nums[1]] : [nums[1], nums[0]];
-	// for (let i = 2; i < nums.length; i++) {
-	// 	if (nums[i] > result[0]) {
-	// 		result[1] = result[0];
-	// 		result[0] = nums[i];
-	// 	} else if (nums[i] > result[1]) {
-	// 		result[1] = nums[i];
-	// 	}
-	// }
-	// i = 2 , nums[2] = 18 > result[0] => result[1] = 5 , result[0] = 18
-	// i = 5 , nums[5] = 6 > result[1] => result[1] = 6 , result[0] = 18
-	// i = 7 , nums[7] = 17 > result[1] => result[1] = 17 , result[0] = 18
 	return result;
 }
 
@@ -35,6 +22,5 @@ let input = [
 ];
 
 for (let i = 0; i < input.length; i++) {
-	process.stdout.write(`#${i + 1} `);
 	console.log(answer(input[i]));
 }

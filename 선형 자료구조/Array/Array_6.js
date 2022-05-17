@@ -4,29 +4,30 @@
 // 배열의 index는 오름차순으로 정렬하여 반환한다.
 
 function answer(nums, target) {
-	// let result = [];
+	let result = [];
 
-	// for (let i = 0; i < nums.length; i++) {
-	// 	for (let j = i + 1; j < nums.length; j++) {
-	// 		if (nums[i] + nums[j] == target) {
-	// 			result.push(i, j);
-	// 		}
-	// 	}
-	// }
-	// return result;
+	for (let i = 0; i < nums.length; i++) {
+		for (let j = i + 1; j < nums.length; j++) {
+			if (nums[i] + nums[j] == target) {
+				result.push(i, j);
+			}
+		}
+	}
+	return result;
 
 	// 다른 풀이
-	let map = {};
 	// target-nums[i] = nums[j]
-	for (let i = 0; i < nums.length; i++) {
-		if (map[target - nums[i]] != undefined) {
-			return [map[target - nums[i]], i];
-		}
 
-		map[nums[i]] = i;
-	}
+	// let map = {};
+	// for (let i = 0; i < nums.length; i++) {
+	// 	if (map[target - nums[i]] != undefined) {
+	// 		return [map[target - nums[i]], i];
+	// 	}
 
-	return [];
+	// 	map[nums[i]] = i;
+	// }
+
+	// return [];
 }
 
 let input = [
