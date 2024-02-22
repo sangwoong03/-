@@ -1,3 +1,3 @@
 def solution(a, b, flag):
-    operator = '+' if flag else '-'
-    return eval(f"{a} {operator} {b}")
+    if flag: return a+b
+    return a-b
