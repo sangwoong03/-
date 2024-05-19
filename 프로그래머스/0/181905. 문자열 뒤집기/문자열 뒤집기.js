@@ -6,6 +6,6 @@ function solution(str, s, e) {
     const firstStr = str.slice(0, s)
     const reversedStr = [...str.slice(s, e + 1)].reverse().join('')
     const lastStr = str.slice(e + 1)
-    console.log(firstStr, reversedStr, lastStr)
+
     return firstStr + reversedStr + lastStr;
 }
