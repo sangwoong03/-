@@ -1,9 +1,13 @@
-function solution(my_string, is_suffix) {
-    const suffixList = [];
+// function solution(my_string, is_suffix) {
+//     const suffixList = [];
     
-    for (let i = 0; i < my_string.length; i++) {
-        suffixList.push(my_string.slice(i));
-    }
+//     for (let i = 0; i < my_string.length; i++) {
+//         suffixList.push(my_string.slice(i));
+//     }
     
-    return suffixList.includes(is_suffix) ? 1 : 0;
+//     return suffixList.includes(is_suffix) ? 1 : 0;
+// }
+
+const solution = (str, suffix) => {
+    return str.endsWith(suffix) ? 1 : 0;
 }
