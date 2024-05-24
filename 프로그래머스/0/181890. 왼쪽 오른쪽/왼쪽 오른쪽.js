@@ -1,10 +1,7 @@
-const solution = (str_list) => {
-  for (let i = 0; i < str_list.length; i++) {
-    if (str_list[i] === "l") {
-      return str_list.slice(0, i);
-    } else if (str_list[i] === "r") {
-      return str_list.slice(i+1);
+const solution = (arr) => {
+    for(let i = 0; i < arr.length; i++) {
+        if (arr[i] === 'l') return arr.slice(0, i);
+        if (arr[i] === 'r') return arr.slice(i + 1);
     }
-  }
-  return [];
+    return [];
 }
