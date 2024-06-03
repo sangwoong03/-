@@ -8,4 +8,4 @@
 //     return answer;
 // }
 
-const solution= arr => arr.map(elem=>Array(elem).fill(elem)).flat()
+const solution= arr => arr.map(elem=>Array(elem).fill(elem)).flat();
