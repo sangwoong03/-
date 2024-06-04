@@ -10,7 +10,7 @@ const solution = (arr, flag) => {
     if (isTrue) {
       answer.push(...new Array(arr[i] * 2).fill(arr[i]));
     } else {
-      answer.length -= arr[i];
+      answer.splice(answer.length - arr[i]);
     }
   }
   return answer;
